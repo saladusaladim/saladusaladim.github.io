@@ -74,16 +74,21 @@ function MM_swapImage() { //v3.0
 <body onload="MM_preloadImages('img/navbar/hover/start.png','img/navbar/hover/vandring.png','img/navbar/hover/omoss.png')">
 <table width="200" border="0" align="center" cellpadding="0" cellspacing="0" id="topbar">
   <tr>
-    <td height="161"><a href="index.html"><img src="img/navbar/normal/main.png" width="795" height="124" border="0" /></a> <img src="img/navbar/normal/left.png" width="53" height="37" /><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('start','','img/navbar/hover/start.png',1)"><img src="img/navbar/normal/start.png" name="start" width="165" height="37" border="0" id="start" /></a><a href="vandring.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('vandring','','img/navbar/hover/vandring.png',1)"><img src="img/navbar/normal/vandring.png" name="vandring" width="179" height="37" border="0" id="vandring" /></a><a href="varfard.html"><img src="img/navbar/pressed/varfard.png" width="180" height="37" border="0" /></a><a href="omoss.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('omoss','','img/navbar/hover/omoss.png',1)"><img src="img/navbar/normal/omsoos.png" name="omoss" width="177" height="37" border="0" id="omoss" /></a><img src="img/navbar/normal/right.png" width="41" height="37" /></td>
+    <td height="161">
+    	<a href="index.html"><img src="img/navbar/normal/main.png" width="795" height="124" border="0" /></a> <img src="img/navbar/normal/left.png" width="53" height="37" /><a href="index.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('start','','img/navbar/hover/start.png',1)"><img src="img/navbar/normal/start.png" name="start" width="165" height="37" border="0" id="start" /></a><a href="vandring.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('vandring','','img/navbar/hover/vandring.png',1)"><img src="img/navbar/normal/vandring.png" name="vandring" width="179" height="37" border="0" id="vandring" /></a><a href="varfard.html"><img src="img/navbar/pressed/varfard.png" width="180" height="37" border="0" /></a><a href="omoss.html" onmouseout="MM_swapImgRestore()" onmouseover="MM_swapImage('omoss','','img/navbar/hover/omoss.png',1)"><img src="img/navbar/normal/omsoos.png" name="omoss" width="177" height="37" border="0" id="omoss" /></a><img src="img/navbar/normal/right.png" width="41" height="37" /></td>
   </tr>
 </table>
 <table width="822" border="0" align="center" cellpadding="0" cellspacing="0" id="table">
   <tr>
+
+
     <td width="51" height="246" valign="top"><img src="img/shadow/loutfill.png" width="51" height="492" /></td>
-    <td width="720" colspan="3" rowspan="2" align="center" valign="top" bgcolor="#FFFFFF"><p><a href="dag1.html"><a href="film.html"></a><a id="shadowbox3b_1" onclick="" href="https://onedrive.live.com/embed?cid=62E7F70AD8415D8E&resid=62E7F70AD8415D8E%2117517&authkey=AGneMkSxADBdq74"><img src="img/dag1.jpg" width="400" height="169" border="0" /></a></p>
+    <td width="720" colspan="3" rowspan="2" align="center" valign="top" bgcolor="#FFFFFF"><p><a href="dag1.html"><a href="film.html"></a><a id="shadowbox3b_1" onclick="shadowbox3b_1();" href="#"><img src="img/dag1.jpg" width="400" height="169" border="0" /></a></p>
       <p><a id="shadowbox3b_2" onclick="shadowbox3b_2();" href="#"><img src="img/dag2.jpg" width="400" height="169" border="0" /></a></p>
       <p><a id="shadowbox3b_3" onclick="shadowbox3b_3();" href="#"><img src="img/dag3.jpg" width="400" height="169" border="0" /></a><br />
     </p></td>
+
+
     <td width="51" height="246" valign="top"><img src="img/shadow/loutfill.png" width="51" height="492" /></td>
   </tr>
   <tr>
@@ -108,7 +113,9 @@ function MM_swapImage() { //v3.0
     <td><img src="img/shadow/rc.png" width="51" height="56" /></td>
   </tr>
 </table>
-<iframe src="https://onedrive.live.com/embed?cid=62E7F70AD8415D8E&resid=62E7F70AD8415D8E%2117517&authkey=AGneMkSxADBdq74" width="720" height="576" frameborder="0" scrolling="no" allowfullscreen></iframe>
+<!--
+<iframe src="https://onedrive.live.com/embed?cid=62E7F70AD8415D8E&resid=62E7F70AD8415D8E%2117517&authkey=AGneMkSxADBdq74" width="720" height="576" frameborder="0" scrolling="no" allowfullscreen></iframe> 
+	!-->
 <script type="text/javascript">
 <!--
 // BeginWebWidget Shadowbox3b
@@ -135,8 +142,8 @@ function MM_swapImage() { //v3.0
 		// See http://www.shadowbox-js.com/usage.html for explainations and the Options page for all avalable options.
 		// Also, if you add or remove options from this list, make sure there is no comma after the final option.
 		Shadowbox.open({
-			 content: 'https://onedrive.live.com/embed?cid=62E7F70AD8415D8E&resid=62E7F70AD8415D8E%2117517&authkey=AGneMkSxADBdq74', //The actual content to display (e.g. URL, HTML code, etc.)
-			 player: "iframe", //The player that should be used for the type of content. Option are: "img", "swf", "flv", "qt", "wmp", "iframe", "html"
+			 content: '', //The actual content to display (e.g. URL, HTML code, etc.)
+			 player: "html", //The player that should be used for the type of content. Option are: "img", "swf", "flv", "qt", "wmp", "iframe", "html"
 			 title: "Tests", //The title to use for the content (optional)
 			 height: 576, //The content's height (in pixels, optional for images)
 			 width: 720, //The content's width (in pixels, optional for images)
