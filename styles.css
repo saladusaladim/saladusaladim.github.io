@@ -1,0 +1,168 @@
+@charset "utf-8";
+body {
+	background-image: url(img/bgwhite11.jpg);
+	background-position:center;
+	background-position: top;
+	background-repeat:no-repeat;
+	background-color:#FFF;
+	
+	
+}
+.sidefades {
+	background-image: url(img/shadow/left.png);
+	background-repeat: repeat-y;
+}
+
+#innnerbar {
+	vertical-align: top;
+	margin: 0px;
+	padding: 10px;
+}
+
+body {
+	margin-top: 0px;
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+body {
+	margin-top: 0px;
+	text-align: center;
+	font-family: Tahoma, Geneva, sans-serif;
+}
+
+
+#table {
+	text-align: left;
+	font-size: 12px;
+}
+#topbar {
+
+
+}
+.bottomnav {
+	font-family: Tahoma, Geneva, sans-serif;
+}
+#webcam {
+	border: 2px solid #000;
+}
+
+/* block list */
+ul.block {
+	border-top: 1px dashed #BCBAAC;
+	margin: 4px 0;
+	padding: 0;
+	width: 90%;
+}
+.vandringmargin {
+	padding-top: 20px;
+	padding-right: 50px;
+	padding-bottom: 0px;
+	padding-left: 50px;
+}
+
+.block li {
+	border-bottom: 1px dashed #BCBAAC;
+	list-style: none;
+}
+.middlenav {
+	position: static;
+	visibility: visible;
+	height: auto;
+	width: auto;
+	left: auto;
+	top: auto;
+	right: auto;
+	bottom: auto;
+}
+
+.block li a,.block li em {
+	color: #333;
+	display: block;
+}
+.block li em {
+	font-size: 0.9em;
+	font-style: normal;
+}
+.block li a {
+	padding: 4px 3%;
+	text-decoration: none;
+	width: 94%;
+}
+.block li a span {font-weight: bold;}
+.block li a:hover {
+	color: #000;
+	background-color: #CCC;
+}
+
+.right .block,.right .block li {border-color: #DCDACC;}
+.right .block li a:hover {
+	background-color: #CCC;
+}
+.invisible a{
+	color: #333;
+}
+.tdmargin {
+	padding-top: 10px;
+	padding-right: 75px;
+	padding-bottom: 0px;
+	padding-left: 75px;
+	font-size: 11px;
+}
+#table tr .tdmargin div a {
+	height: 17px;
+	width: 69px;
+	float: left;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	border-left-color: #CCC;
+}
+#table tr td table tr .imgtop img {
+	border: 1px solid #000;
+	margin-bottom: 2px;
+	margin-left: 2px;
+	text-align: center;
+	margin-top: 2px;
+	margin-right: 2px;
+}
+
+#table tr .tdmargin div a:hover {
+	height: 17px;
+	width: 69px;
+	float: left;
+	font-family: Tahoma, Geneva, sans-serif;
+	font-size: 12px;
+	color: #000;
+	text-decoration: none;
+	text-align: center;
+	border-top-width: 1px;
+	border-right-width: 1px;
+	border-bottom-width: 1px;
+	border-left-width: 1px;
+	border-top-style: dotted;
+	border-bottom-style: dotted;
+	border-top-color: #CCC;
+	border-right-color: #CCC;
+	border-bottom-color: #CCC;
+	border-left-color: #CCC;
+	background-color: #CCC;
+}
+.backroudfadel {
+	background-image: url(img/shadow/left.png);
+	background-repeat: repeat-y;
+}
+.backroudfader {
+	background-image: url(img/shadow/right.png);
+	background-repeat: repeat-y;
+}
