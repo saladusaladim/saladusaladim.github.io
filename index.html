@@ -3,191 +3,284 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Kebnekaise – ny sida under uppbyggnad</title>
-<meta name="description" content="En modernare version av Kebnekaise-sidan byggs. Den ursprungliga guiden och reseberättelsen finns kvar under /old/.">
-<style>
-  :root {
-    --ink: #10202b;
-    --muted: #4c6472;
-    --sky: #e8f1f6;
-    --snow: #f8fbfc;
-    --accent: #16607f;
-    --accent-dark: #0f4a63;
-    --line: rgba(16, 32, 43, .12);
-  }
-
-  * { box-sizing: border-box; }
-
-  html, body { height: 100%; }
-
-  body {
-    margin: 0;
-    font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    color: var(--ink);
-    background:
-      radial-gradient(1200px 600px at 80% -10%, #dcecf4 0%, transparent 60%),
-      radial-gradient(900px 500px at -10% 110%, #e8eee9 0%, transparent 55%),
-      var(--snow);
-    display: grid;
-    place-items: center;
-    padding: 2rem 1.25rem;
-  }
-
-  .card {
-    width: min(44rem, 100%);
-    background: rgba(255, 255, 255, .72);
-    border: 1px solid var(--line);
-    border-radius: 1.5rem;
-    box-shadow: 0 24px 60px -30px rgba(16, 32, 43, .35);
-    backdrop-filter: blur(8px);
-    overflow: hidden;
-  }
-
-  .hero {
-    position: relative;
-    padding: 3rem 2.5rem 2.5rem;
-    background: linear-gradient(180deg, #f3f8fb 0%, #ffffff 100%);
-    border-bottom: 1px solid var(--line);
-  }
-
-  .hero svg {
-    position: absolute;
-    inset: auto 0 0;
-    width: 100%;
-    height: 5rem;
-    color: #cfe1ea;
-    opacity: .8;
-  }
-
-  .eyebrow {
-    margin: 0 0 .9rem;
-    font-size: .75rem;
-    font-weight: 700;
-    letter-spacing: .14em;
-    text-transform: uppercase;
-    color: var(--accent);
-  }
-
-  h1 {
-    margin: 0;
-    font-size: clamp(2rem, 6vw, 3.25rem);
-    line-height: 1.05;
-    letter-spacing: -.02em;
-  }
-
-  .content {
-    padding: 2.25rem 2.5rem 2.5rem;
-  }
-
-  .content p {
-    margin: 0 0 1rem;
-    font-size: 1.0625rem;
-    line-height: 1.65;
-    color: var(--muted);
-    max-width: 36rem;
-  }
-
-  .actions {
-    margin-top: 1.75rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: .75rem;
-    align-items: center;
-  }
-
-  .button {
-    display: inline-flex;
-    align-items: center;
-    gap: .5rem;
-    padding: .8rem 1.25rem;
-    border-radius: .65rem;
-    background: var(--accent);
-    color: #fff;
-    font-weight: 650;
-    text-decoration: none;
-    transition: background .15s ease, transform .15s ease;
-  }
-
-  .button:hover { background: var(--accent-dark); transform: translateY(-1px); }
-
-  .button:focus-visible {
-    outline: 3px solid #8bc4de;
-    outline-offset: 3px;
-  }
-
-  .note {
-    margin: 2rem 0 0;
-    padding-top: 1.5rem;
-    border-top: 1px solid var(--line);
-    font-size: .8125rem;
-    line-height: 1.6;
-    color: #6b7f8a;
-  }
-
-  .badge {
-    display: inline-flex;
-    align-items: center;
-    gap: .45rem;
-    margin-bottom: 1.5rem;
-    padding: .3rem .65rem;
-    border-radius: 999px;
-    background: #eef6f9;
-    border: 1px solid #cfe3eb;
-    font-size: .75rem;
-    font-weight: 600;
-    color: var(--accent-dark);
-  }
-
-  .badge::before {
-    content: "";
-    width: .45rem;
-    height: .45rem;
-    border-radius: 50%;
-    background: #3d9bbd;
-  }
-
-  @media (max-width: 540px) {
-    .hero { padding: 2.25rem 1.5rem 2rem; }
-    .content { padding: 1.75rem 1.5rem 2rem; }
-  }
-
-  @media (prefers-reduced-motion: reduce) {
-    .button { transition: none; }
-  }
-</style>
+<title>Kebnekaise – guide till fjällvandring och bestigning</title>
+<meta name="description" content="En oberoende guide till Kebnekaise: vägar till toppen, vandringsleder, boende, utrustning och packlista – plus fyra gymnasisters resedagbok från 2009.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Kebnekaise – guide till fjällvandring och bestigning">
+<meta property="og:description" content="Allt vi lärde oss på vägen till Sveriges högsta topp, och berättelsen om fyra gymnasisters första fjällvandring.">
+<meta property="og:image" content="https://saladusaladim.github.io/assets/images/hero.jpg">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-<main class="card">
-  <header class="hero">
-    <p class="eyebrow">Fjällvandring i Kebnekaiseområdet</p>
-    <h1>En ny sida växer fram</h1>
-    <svg viewBox="0 0 800 120" aria-hidden="true" preserveAspectRatio="none">
-      <path d="M0 120 L0 88 L90 62 L150 74 L245 34 L330 70 L410 46 L500 78 L585 52 L680 82 L760 64 L800 76 L800 120 Z" fill="currentColor" opacity=".55"/>
-      <path d="M0 120 L0 100 L70 84 L160 98 L260 66 L355 96 L470 72 L560 98 L650 78 L740 100 L800 88 L800 120 Z" fill="currentColor"/>
-    </svg>
-  </header>
+<a class="skip-link" href="#main">Hoppa till innehåll</a>
 
-  <section class="content">
-    <span class="badge">Under uppbyggnad</span>
-    <p>
-      Den ursprungliga Kebnekaise-sidan från 2010 bevaras medan en modernare version byggs.
-      Guiden, reseberättelserna och bilderna finns kvar och fungerar precis som förut.
-    </p>
-    <p>
-      Den gamla sidan hittar du på <strong>/old/</strong> så länge.
-    </p>
+<header class="site-header">
+  <div class="container header-inner">
+    <a class="brand" href="index.html">
+      <svg class="brand-mark" viewBox="0 0 32 24" aria-hidden="true"><path d="M1 23 10 5l6 11 4-7 11 14H1Z" fill="currentColor"/></svg>
+      <span>Kebnekaise</span>
+    </a>
+    <nav class="site-nav" aria-label="Huvudmeny">
+      <a href="index.html" aria-current="page">Start</a>
+      <a href="vandring.html">Vandring</a>
+      <a href="varfard.html">Vår färd</a>
+      <a href="omoss.html">Om oss</a>
+    </nav>
+  </div>
+</header>
 
-    <div class="actions">
-      <a class="button" href="./old/">
-        Besök den gamla sidan
-        <span aria-hidden="true">→</span>
-      </a>
+<main id="main">
+
+  <section class="hero" aria-labelledby="hero-title">
+    <div class="hero-copy">
+      <p class="eyebrow">Fjällvandring i Kebnekaiseområdet</p>
+      <h1 id="hero-title">Kebnekaise</h1>
+      <p class="lede">Guiden, berättelsen och bilderna från fyra gymnasisters första möte med fjällen – och allt vi lärde oss på vägen.</p>
+      <div class="hero-actions">
+        <a class="button" href="vandring.html">Läs vandringsguiden</a>
+        <a class="button button-ghost" href="varfard.html">Följ resan dag för dag</a>
+      </div>
+      <dl class="hero-stats">
+        <div>
+          <dt>Nordtoppen</dt>
+          <dd>2 096,8 m</dd>
+        </div>
+        <div>
+          <dt>Nikkaluokta–fjällstationen</dt>
+          <dd>20 km</dd>
+        </div>
+        <div>
+          <dt>Kiruna tur och retur</dt>
+          <dd>8 dagar</dd>
+        </div>
+      </dl>
     </div>
-
-    <p class="note">
-      Skapad 2009–2010 av Ossian Mauritzson, Simon Nelson Landén, Marcus Lilliequist och Daniel Wedenborg.
-    </p>
+    <div class="hero-media">
+      <img src="assets/images/hero.jpg" alt="Två tält på kalfjället med Kebnekaise-massivet i bakgrunden" width="800" height="392">
+      <p class="hero-caption">Tältläger nedanför Kebnekaise-massivet, augusti 2009.</p>
+    </div>
   </section>
+
+  <section class="section" aria-labelledby="plan-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Planera turen</p>
+        <h2 id="plan-title">Allt vi önskade att vi visste innan</h2>
+        <p>Från bussbiljetten i Kiruna till packlistan i tältet. Här är guiden vi själva hade velat ha när vi planerade vår första fjällvandring.</p>
+      </div>
+      <div class="plan-grid">
+        <a class="plan-card" href="vandring.html#bestigning">
+          <span class="plan-num">01</span>
+          <div>
+            <h3>Bestigning</h3>
+            <p>Västra eller östra leden? Så tar du dig till toppen och vad som krävs.</p>
+          </div>
+          <span class="text-link">Läs mer <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="plan-card" href="vandring.html#vandringsleder">
+          <span class="plan-num">02</span>
+          <div>
+            <h3>Vandringsleder</h3>
+            <p>Dagsturer, Vistasvagge och vägen runt hela massivet.</p>
+          </div>
+          <span class="text-link">Läs mer <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="plan-card" href="vandring.html#utrustning">
+          <span class="plan-num">03</span>
+          <div>
+            <h3>Utrustning &amp; kläder</h3>
+            <p>Det som faktiskt behövdes – och det vi kunde lämnat hemma.</p>
+          </div>
+          <span class="text-link">Läs mer <span aria-hidden="true">→</span></span>
+        </a>
+        <a class="plan-card" href="vandring.html#packlista">
+          <span class="plan-num">04</span>
+          <div>
+            <h3>Packlista</h3>
+            <p>En beprövad lista för en vecka i fjällen, från tält till skoskavsplåster.</p>
+          </div>
+          <span class="text-link">Läs mer <span aria-hidden="true">→</span></span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="days-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Vår färd</p>
+        <h2 id="days-title">Åtta dagar, två tält och en topp</h2>
+        <p>Dagboken från augusti 2009: förseningar, regn, tunga ryggsäckar och en vy från toppen som gjorde allt värt det.</p>
+      </div>
+      <div class="day-grid">
+        <a class="day-card" href="dag1.html">
+          <div class="day-card-media"><img src="assets/images/days/dag1/card.jpg" alt="Solnedgång över Latjojaure" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 1</p>
+            <h3>Avfärd och första tältnatten</h3>
+            <p>Försenat flyg, snabb shopping i Kiruna och ett första läger vid sjön.</p>
+            <span class="day-card-meta">7 bilder →</span>
+          </div>
+        </a>
+        <a class="day-card" href="dag2.html">
+          <div class="day-card-media"><img src="assets/images/days/dag2/card.jpg" alt="Ren som betar nära tältplatsen" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 2</p>
+            <h3>Mot fjällstationen</h3>
+            <p>Fyra timmars vandring, renar vid tältet och väckning klockan fyra.</p>
+            <span class="day-card-meta">9 bilder →</span>
+          </div>
+        </a>
+        <a class="day-card" href="dag3.html">
+          <div class="day-card-media"><img src="assets/images/days/dag3/card.jpg" alt="Vy från Kebnekaises sydtopp" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 3</p>
+            <h3>Sydtoppen</h3>
+            <p>7,5 timmar uppför Kittelbäcken, Vierramvare och Kaffedalen.</p>
+            <span class="day-card-meta">8 bilder →</span>
+          </div>
+        </a>
+        <a class="day-card" href="dag4.html">
+          <div class="day-card-media"><img src="assets/images/days/dag4/card.jpg" alt="Soppa som värms på stormkök" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 4</p>
+            <h3>Vilodag på fjällstationen</h3>
+            <p>Kortspel, pasta och renhäng – och en klocka som springer iväg.</p>
+            <span class="day-card-meta">4 bilder →</span>
+          </div>
+        </a>
+        <a class="day-card" href="dag5.html">
+          <div class="day-card-media"><img src="assets/images/days/dag5/card.jpg" alt="Tältplats med fjäll i bakgrunden" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 5</p>
+            <h3>Tillbaka i regnet</h3>
+            <p>Nio kilometer i ösregn, blöta kläder och en efterlängtad brasa.</p>
+            <span class="day-card-meta">3 bilder →</span>
+          </div>
+        </a>
+        <a class="day-card" href="dag6.html">
+          <div class="day-card-media"><img src="assets/images/days/dag6/card.jpg" alt="Sjö och fjäll vid Nikkaluokta" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 6</p>
+            <h3>Sista etappen till Nikkaluokta</h3>
+            <p>Tidig morgon, kall dusch och buss till Kiruna – och pizza.</p>
+            <span class="day-card-meta">6 bilder →</span>
+          </div>
+        </a>
+        <a class="day-card" href="dag7.html">
+          <div class="day-card-media"><img src="assets/images/days/dag7/card.jpg" alt="Utsikt över Kiruna från skidbacken" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 7</p>
+            <h3>Kiruna från ovan</h3>
+            <p>Skidbacken, kyrkan som var stängd och ett eget chillrum.</p>
+            <span class="day-card-meta">4 bilder →</span>
+          </div>
+        </a>
+        <a class="day-card" href="dag8.html">
+          <div class="day-card-media"><img src="assets/images/days/dag8/card.jpg" alt="På väg hem vid flygplanet i Kiruna" loading="lazy"></div>
+          <div class="day-card-body">
+            <p class="eyebrow">Dag 8</p>
+            <h3>Hemresa</h3>
+            <p>Sista morgonen, flygbussen och en sista bild innan hemfärd.</p>
+            <span class="day-card-meta">1 bild →</span>
+          </div>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" aria-labelledby="now-title">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Just nu</p>
+        <h2 id="now-title">Läget i fjällen</h2>
+        <p>Kika in mot fjällstationen och kolla prognosen innan du packar ryggsäcken.</p>
+      </div>
+      <div class="now-grid">
+        <div class="now-card">
+          <div class="now-card-head">
+            <h3>Webbkamera · Kebnekaise fjällstation</h3>
+            <span class="status">Live</span>
+          </div>
+          <div class="webcam-media">
+            <img data-webcam src="https://liveevent.se/webbkamera/kebnekaise/kebnekaise_1_1280.jpg" alt="Webbkamera från Kebnekaise fjällstation" width="1280" height="960" loading="lazy">
+            <p class="webcam-fallback">Kameran är inte tillgänglig just nu. Prova igen om en stund.</p>
+          </div>
+          <div class="now-card-foot">
+            <span>Bilden uppdateras varje minut · 690 m ö.h.</span>
+            <a href="https://liveevent.se/webbkamera/kebnekaise/kebnekaise_1_1280.jpg" target="_blank" rel="noopener">Öppna bilden ↗</a>
+          </div>
+        </div>
+        <div class="weather-card">
+          <h3>Väder i fjällen</h3>
+          <p>Fjällvädret skiftar snabbt. Kolla prognosen för dalgången och toppen innan du går upp.</p>
+          <div class="weather-list">
+            <a href="https://www.yr.no/en/forecast/daily-table/2-2689715" target="_blank" rel="noopener">Nikkaluokta <small>yr.no ↗</small></a>
+            <a href="https://www.yr.no/en/forecast/daily-table/2-2669374" target="_blank" rel="noopener">Tarfala <small>yr.no ↗</small></a>
+            <a href="https://www.yr.no/en/forecast/daily-table/2-2727664" target="_blank" rel="noopener">Abisko <small>yr.no ↗</small></a>
+          </div>
+          <p class="weather-note">Prognoserna öppnas hos yr.no. Ta alltid med vind- och regnskydd, även om solen skiner hemma.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section section-alt" aria-labelledby="about-title">
+    <div class="container split">
+      <div class="split-media">
+        <img src="assets/images/team.jpg" alt="Ossian, Simon, Marcus och Daniel på Kebnekaises topp" width="560" height="331" loading="lazy">
+      </div>
+      <div>
+        <p class="eyebrow">Om projektet</p>
+        <h2 id="about-title">Fyra grabbar, ett projektarbete och en dröm om fjällen</h2>
+        <p>Våren 2009 bestämde vi oss för att bestiga Kebnekaise som en del av vårt projektarbete i skolan. Vi hade ingen tidigare erfarenhet av fjällvandring – bara ett tält, en handledare och en ganska optimistisk plan.</p>
+        <p>I augusti gick vi från Nikkaluokta till fjällstationen, upp på sydtoppen och hela vägen tillbaka. Den här sidan är vårt sätt att dela med oss av vad vi lärde oss.</p>
+        <a class="text-link" href="omoss.html">Läs hela berättelsen <span aria-hidden="true">→</span></a>
+      </div>
+    </div>
+  </section>
+
+  <section class="archive" aria-labelledby="archive-title">
+    <div class="container archive-inner">
+      <div>
+        <h2 id="archive-title">Den ursprungliga sidan finns kvar</h2>
+        <p>Sidan från 2010 är bevarad i sin helhet – med tidningsklipp, gamla väderwidgetar och allt annat.</p>
+      </div>
+      <a class="button button-ghost" href="old/">Besök arkivet</a>
+    </div>
+  </section>
+
 </main>
+
+<footer class="site-footer">
+  <div class="container footer-grid">
+    <div class="footer-about">
+      <p class="footer-brand">Kebnekaise</p>
+      <p>En oberoende guide till fjällvandring i Kebnekaiseområdet, med reseberättelsen från fyra gymnasisters första bestigning 2009.</p>
+    </div>
+    <nav aria-label="Sidor">
+      <h2>Sidor</h2>
+      <ul>
+        <li><a href="index.html">Start</a></li>
+        <li><a href="vandring.html">Vandring</a></li>
+        <li><a href="varfard.html">Vår färd</a></li>
+        <li><a href="film.html">Film</a></li>
+        <li><a href="omoss.html">Om oss</a></li>
+      </ul>
+    </nav>
+    <div>
+      <h2>Arkivet</h2>
+      <p>Den ursprungliga sidan från 2010 finns kvar i sin helhet.</p>
+      <a class="text-link" href="old/">Besök den gamla sidan <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+  <div class="container footer-bottom">
+    <p>Skapad 2009–2010 av Ossian Mauritzson, Simon Nelson Landén, Marcus Lilliequist och Daniel Wedenborg.</p>
+    <p>Guiden uppdaterad 2026.</p>
+  </div>
+</footer>
+
+<script src="assets/js/main.js" defer></script>
 </body>
 </html>
