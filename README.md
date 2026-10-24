@@ -30,11 +30,12 @@ Kebnekaise's highest point is the **north summit at 2,096.8 m**. The south summi
 
 ## The modern site
 
-The new site is plain, static HTML, CSS and a small amount of JavaScript. There is no build step, no framework, no analytics and no cookies.
+The new site is plain, static HTML, CSS and a small amount of JavaScript. There is no build step, no framework, no analytics and no cookies. React can be deployed to GitHub Pages with a Vite build and a Pages workflow, but for 14 content pages it would add build and deployment complexity without improving the result, so the site stays framework-free.
 
 - **Responsive layout** from small phones to wide desktops.
 - **Semantic HTML** with one `h1` per page, landmarks, a skip link, visible focus styles and `prefers-reduced-motion` support.
-- **No web fonts or trackers**; it uses the system font stack for body text and a serif stack for headings.
+- **No web fonts or trackers**; it uses the system font stack throughout, with a serif italic accent for display lines.
+- **High-resolution hero image** with responsive `srcset` variants, replacing the soft 800 px original.
 - **Photo galleries** use a native `<dialog>` lightbox with keyboard arrows and Escape. Without JavaScript, each image still opens as a normal link.
 - **Optimized images** are resized and re-encoded into `assets/images/`. The originals remain untouched in `old/images/`.
 - **External services:** the webcam is loaded over HTTPS from `liveevent.se`, weather links go to `yr.no`, and the films open on OneDrive and Vimeo. These services are outside the project's control and may change or disappear.
@@ -104,6 +105,7 @@ Important consequences:
 - [x] Improve accessibility: viewport, `lang`, alt text, contrast, readable type sizes and focus styles.
 - [x] Rebuild the photo galleries and diary with a modern lightbox.
 - [x] Add a 404 page, Open Graph metadata, `robots.txt` and `sitemap.xml`.
+- [x] Refresh the visual design with a crisp hero image, fluid type, pill buttons and responsive cards.
 - [ ] Decide whether to redirect legacy deep links beyond the reused filenames.
 - [ ] Review the remaining 2010-era advice and links periodically.
 
@@ -111,4 +113,8 @@ Important consequences:
 
 Created as a school project by **Ossian Mauritzson**, **Simon Nelson Landén**, **Marcus Lilliequist** and **Daniel Wedenborg**, with supervisor **Ola Larson**.
 
-The guide text, diary and photographs belong to their respective authors. No reuse license is granted unless stated otherwise.
+The guide text, diary and historical photographs belong to their respective authors. No reuse license is granted unless stated otherwise.
+
+### Image credits
+
+- Home hero: [Storglaciären with Kebnekaise behind](https://commons.wikimedia.org/wiki/File:Storglaci%C3%A4ren_with_Kebnekaise_behind_2022-08-25_18.jpg) by **Leonhard Lenz**, released under **CC0**, via Wikimedia Commons. Responsive 2560/1600/800 px versions are stored in `assets/images/`; `og-hero.jpg` is a 1200 × 630 social-preview crop.
